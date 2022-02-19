@@ -1,5 +1,3 @@
-// import axios from 'axios';
-
 const url = 'https://hexschool.github.io/js-filter-data/data.json';
 const filter = document.querySelector('.filter');
 const table = document.querySelector('.table-content');
@@ -36,7 +34,7 @@ function filterCategory(e) {
   }
 }
 
-// eslint-disable-next-line no-undef
+/* global axios */
 axios.get(url).then((res) => {
   data = res.data.filter((a) => a.作物名稱);
   renderData(data);
